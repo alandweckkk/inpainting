@@ -54,6 +54,10 @@ export default function InpaintingTool() {
       const savedDeveloperMessage = localStorage.getItem(DEVELOPER_MESSAGE_STORAGE_KEY);
       if (savedDeveloperMessage) {
         setGptDeveloperMessage(savedDeveloperMessage);
+      } else {
+        // Set default developer message if none exists
+        const defaultMessage = "You're an expert at writing prompts for Flux Kontext Inpainting Model. You'll be provided with a short description where a user has submitted feedback on the existing sticker that was made from a photo they provided. Your task is look at the sticker, and the inpainting black & white mask, and write an effective prompt for Flux Kontext Inpainting Model so that the output it generates will make the user happy by fulfilling their edit request.";
+        setGptDeveloperMessage(defaultMessage);
       }
     } catch (error) {
       console.warn('Failed to load developer message from localStorage:', error);
