@@ -28,7 +28,7 @@ Create a `.env.local` file in the root directory:
 
 ```bash
 # Required: Your FAL.AI API key
-GEMINI_API_KEY=your_fal_ai_api_key_here
+FAL_KEY=your_fal_ai_api_key_here
 
 # Required: Vercel Blob storage (for image uploads)
 BLOB_READ_WRITE_TOKEN=your_vercel_blob_token_here
@@ -132,7 +132,7 @@ inpainting/
 
 ### Common Issues
 
-**"GEMINI_API_KEY environment variable not configured"**
+**"FAL_KEY environment variable not configured"**
 - Make sure you've added your FAL.AI API key to `.env.local`
 - Restart the development server after adding environment variables
 
