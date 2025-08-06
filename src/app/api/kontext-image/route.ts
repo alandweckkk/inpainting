@@ -53,11 +53,11 @@ export async function POST(request: NextRequest) {
     }
 
     // Prepare Fal.AI API request for FLUX Kontext LoRA inpainting
-    const falApiKey = process.env.FAL_KEY;
+    const falApiKey = process.env.GEMINI_API_KEY;
     if (!falApiKey) {
-      console.error('❌ FAL_KEY environment variable not set');
+      console.error('❌ GEMINI_API_KEY environment variable not set');
       return NextResponse.json({ 
-        error: 'FAL_KEY environment variable not configured' 
+        error: 'GEMINI_API_KEY environment variable not configured' 
       }, { status: 500 });
     }
 
